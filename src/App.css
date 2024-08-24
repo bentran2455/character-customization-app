@@ -1,0 +1,145 @@
+div#root {
+  width: 100rem;
+}
+
+body {
+  background-color: #d9eaf6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.App {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+#list-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.list {
+  margin-bottom: 20px;
+}
+
+.list h1 {
+  font-size: 20px;
+  color: #333;
+  margin: 0;
+  display: inline-block;
+  vertical-align: middle;
+  text-transform: capitalize;
+}
+
+.list p {
+  font-size: 18px;
+  color: #555;
+  margin: 0;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+.list .images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.list img {
+  margin: 5px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  transition: transform 0.2s, border-color 0.2s;
+  background: burlywood;
+}
+
+.list img:hover {
+  transform: scale(1.1);
+  border-color: #007bff;
+}
+
+.selected {
+  border-color: #007bff;
+}
+
+.avatar {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#avatar-container {
+  position: sticky;
+  top: 0;
+  height: 100%;
+}
+
+.avatar {
+  width: 300px;
+  height: 400px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.randomize {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.random-button {
+  background-color: burlywood;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  margin: 20px auto;
+  display: flex;
+}
+
+.random-button:hover {
+  transform: scale(1.05);
+}
+
+.random-button:active {
+  transform: scale(0.95);
+}
+.avatar img {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+@media (max-width: 767px) {
+  .App {
+    flex-direction: column;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .list {
+    max-width: 700px;
+  }
+  #avatar-container {
+    position: relative;
+  }
+}
